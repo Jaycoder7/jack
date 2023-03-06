@@ -98,7 +98,7 @@ function animate() {
   const kineticEnergy = 0.5 * mass * length * length * angularVelocity * angularVelocity;
   const potentialEnergy = mass * g * length * (1 - Math.cos(angle));
   const totalEnergy = kineticEnergy + potentialEnergy;
-  if (x < 100 && y > 300 || bob==1){
+  if (x < 100 && y > 300){
 
 bob=1;
 ctx.font = "30px Times New Roman";
