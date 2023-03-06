@@ -1,6 +1,6 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-var bob=0;
+var event = 32;
 const amplitudeInput = document.getElementById("amplitude");
 const lengthInput = document.getElementById("length");
 const periodInput = document.getElementById("period");
