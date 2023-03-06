@@ -60,7 +60,7 @@ function animate() {
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
- console.log(g);
+ 
   ctx.beginPath();
   var h = 100;
   var j = 300;
@@ -85,6 +85,7 @@ function animate() {
   const timeDiff = time % periodTime;
   angle = amplitude * Math.cos(2 * Math.PI * timeDiff / period);
   angularAcceleration = -(g / length) * Math.sin(angle);
+ console.log(angularAcceleration);
   angularVelocity += angularAcceleration;
   angularVelocity *= 1 - friction;
   const x = canvas.width / 2 + length * Math.sin(angle);
