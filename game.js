@@ -32,7 +32,7 @@ function update() {
 }
 
   
-function start(gameState){
+/*function start(gameState){
  ctx.clearRect(0,0, canvas.width,canvas.height);
   ctx.font = "30px Times New Roman";
 length = 0;
@@ -49,7 +49,7 @@ amplitude = 0;
 });
 doument.keypress(e);
 }
-
+*/
 function animate() {
 
   
@@ -108,11 +108,11 @@ ctx.strokeText("YOU WON!", 200 , 200);
 
   }
 }
-   if (gameState=="Start"){
-     start();
-  }
-else{
+ //  if (gameState=="Start"){
+   //  start();
+ // }
+//else{
 animate();
-}
+//}
 
 
