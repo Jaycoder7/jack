@@ -6,7 +6,7 @@ const lengthInput = document.getElementById("length");
 const periodInput = document.getElementById("period");
 const massInput = document.getElementById("mass");
 const frictionInput = document.getElementById("friction");
-
+var gameState="Start";
 let amplitude = parseFloat(amplitudeInput.value);
 let length = parseFloat(lengthInput.value);
 let period = parseFloat(periodInput.value);
@@ -31,18 +31,20 @@ function update() {
   friction = parseFloat(frictionInput.value);
 }
 
- 
+  document.addEventListener('keydown', function(event) {
+        gameState="play";
+        }
+    }, false);
 
-function clipImageInPolygon(img){
-  //var canvas = document.createElement("canvas");
- // canvas.width = img.width;
-//canvas.height = img.height;
-  var ctx = canvas.getContext("2d");
-  const newImage = new Image(img);
-  ctx.drawImage(newImage, 0, 0);
-   
-  img.src = canvas.toDataURL(newImage);
-  }
+function start(gameState){
+ ctx.clearRect(0,0, canvas.width,canvas.height);
+  ctx.font = "30px Times New Roman";
+length = 0;
+amplitude = 0;  
+  ctx.strokeText("Jack Sparrow is stuck on a island, Edit the features of the pendulum to get him across sucessfully!", 200 , 200);
+  ctx.strokeText("Press Space to start", 200 , 300);
+  
+}
 
 function animate() {
 
@@ -94,7 +96,7 @@ function animate() {
   if (x < 100 && y > 300 || bob==1){
 
 bob=1;
-ctx.font = "30px Verdana";
+ctx.font = "30px Times New Roman";
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 length = 0;
 amplitude = 0;  
@@ -102,6 +104,11 @@ ctx.strokeText("YOU WON!", 200 , 200);
 
   }
 }
-
+   if (gameState=="Start"){
+     start();
+  }
+else{
 animate();
+}
+
 
