@@ -1,6 +1,6 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-var event = 32;
+var e = 32;
 const amplitudeInput = document.getElementById("amplitude");
 const lengthInput = document.getElementById("length");
 const periodInput = document.getElementById("period");
@@ -41,13 +41,13 @@ amplitude = 0;
   ctx.strokeText("Press Space to start", 200 , 300);
  $(window).keypress(function (e) {
   if (e.keyCode === 0 || e.keyCode === 32) {
-    e.preventDefault()
-    console.log('Space pressed')
+    e.preventDefault();
+    console.log('Space pressed');
     //do some stuff here
-    /*some animation*/.delay(3000);//plays animation for 3 seconds
+   
   }
 });
-
+doument.keypress(e);
 }
 
 function animate() {
