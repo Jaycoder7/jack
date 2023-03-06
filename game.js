@@ -60,7 +60,7 @@ function animate() {
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
- 
+ console.log(g);
   ctx.beginPath();
   var h = 100;
   var j = 300;
