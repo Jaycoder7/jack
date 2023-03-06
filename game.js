@@ -6,19 +6,20 @@ const lengthInput = document.getElementById("length");
 const periodInput = document.getElementById("period");
 const massInput = document.getElementById("mass");
 const frictionInput = document.getElementById("friction");
+const gravityInput = document.getElementById("g");
 var gameState="Start";
 let amplitude = parseFloat(amplitudeInput.value);
 let length = parseFloat(lengthInput.value);
 let period = parseFloat(periodInput.value);
 let mass = parseFloat(massInput.value);
 let friction = parseFloat(frictionInput.value);
-
+ let g = parseFloat(gravityInput.value);
 amplitudeInput.addEventListener("input", update);
 lengthInput.addEventListener("input", update);
 periodInput.addEventListener("input", update);
 massInput.addEventListener("input", update);
 frictionInput.addEventListener("input", update);
-
+gravityInput.addEventListener("input", update);
 let angle = amplitude * Math.PI / 180;
 let angularVelocity = 0;
 let angularAcceleration = 0;
@@ -76,7 +77,7 @@ function animate() {
   }
   ctx.drawImage(newImage, -90, 200, 250, 208);
 
-  const g = 9.81;
+ 
   const time = Date.now() / 1000;
   const periodTime = 2 * Math.PI * Math.sqrt(length / g);
   const timeDiff = time % periodTime;
