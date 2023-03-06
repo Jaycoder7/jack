@@ -31,11 +31,7 @@ function update() {
   friction = parseFloat(frictionInput.value);
 }
 
-  document.addEventListener('keydown', function(event) {
-        gameState="play";
-        }
-    }, false);
-
+  
 function start(gameState){
  ctx.clearRect(0,0, canvas.width,canvas.height);
   ctx.font = "30px Times New Roman";
@@ -43,7 +39,10 @@ length = 0;
 amplitude = 0;  
   ctx.strokeText("Jack Sparrow is stuck on a island, Edit the features of the pendulum to get him across sucessfully!", 200 , 200);
   ctx.strokeText("Press Space to start", 200 , 300);
-  
+  document.addEventListener('keydown', function(event) {
+        gameState="play";
+        }, false);
+
 }
 
 function animate() {
