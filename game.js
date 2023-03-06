@@ -39,11 +39,12 @@ length = 0;
 amplitude = 0;  
   ctx.strokeText("Jack Sparrow is stuck on a island, Edit the features of the pendulum to get him across sucessfully!", 200 , 200);
   ctx.strokeText("Press Space to start", 200 , 300);
-  document.keypress(function (e) {
+ $(window).keypress(function (e) {
   if (e.keyCode === 0 || e.keyCode === 32) {
-    e.preventDefault();
-    console.log('Space pressed');
-   
+    e.preventDefault()
+    console.log('Space pressed')
+    //do some stuff here
+    /*some animation*/.delay(3000);//plays animation for 3 seconds
   }
 });
 
