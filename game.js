@@ -1,6 +1,7 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 var e = 32;
+var bob =0;
 const amplitudeInput = document.getElementById("amplitude");
 const lengthInput = document.getElementById("length");
 const periodInput = document.getElementById("period");
@@ -30,6 +31,7 @@ function update() {
   period = parseFloat(periodInput.value);
   mass = parseFloat(massInput.value);
   friction = parseFloat(frictionInput.value);
+ g = parseFloat(gravityInput.value);
 }
 
   
@@ -98,7 +100,7 @@ function animate() {
   const kineticEnergy = 0.5 * mass * length * length * angularVelocity * angularVelocity;
   const potentialEnergy = mass * g * length * (1 - Math.cos(angle));
   const totalEnergy = kineticEnergy + potentialEnergy;
-  if (x < 100 && y > 300){
+  if (x < 100 && y > 300||bob==1){
 
 bob=1;
 ctx.font = "30px Times New Roman";
