@@ -103,7 +103,7 @@ function animate() {
   const potentialEnergy = mass * g * length * (1 - Math.cos(angle));
   const totalEnergy = kineticEnergy + potentialEnergy;
  
- console.log("period: " + periodTime +"length:"+length+ "amplitude: "+amplitude );
+ console.log("period: " + periodTime +"length:"+length+ "amplitude: "+amplitude + "frequency: "+frequency);
   if (x < 100 && y > 300||bob==1){
 
 bob=1;
