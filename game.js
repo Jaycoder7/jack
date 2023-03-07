@@ -79,7 +79,7 @@ function animate() {
   }
   ctx.drawImage(newImage, -90, 200, 250, 208);
 
- console.log("period: " + period +"length:"+length+ "amplitude: "+amplitude );
+ console.log("period: " + periodTime +"length:"+length+ "amplitude: "+amplitude );
   
   
   const time = Date.now() / 1000;
