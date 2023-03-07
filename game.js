@@ -79,7 +79,7 @@ function animate() {
   }
   ctx.drawImage(newImage, -90, 200, 250, 208);
 
- console.log("period: " + periodTime +"length:"+length+ "amplitude: "+amplitude );
+ 
   
   
   const time = Date.now() / 1000;
@@ -102,6 +102,8 @@ function animate() {
   const kineticEnergy = 0.5 * mass * length * length * angularVelocity * angularVelocity;
   const potentialEnergy = mass * g * length * (1 - Math.cos(angle));
   const totalEnergy = kineticEnergy + potentialEnergy;
+ 
+ console.log("period: " + periodTime +"length:"+length+ "amplitude: "+amplitude );
   if (x < 100 && y > 300||bob==1){
 
 bob=1;
