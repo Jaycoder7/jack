@@ -79,7 +79,9 @@ function animate() {
   }
   ctx.drawImage(newImage, -90, 200, 250, 208);
 
- 
+ console.log("period: " + period +"length:"+length+ "amplitude: "+amplitude );)
+  
+  
   const time = Date.now() / 1000;
   const periodTime = 2 * Math.PI * Math.sqrt(length / g);
   const timeDiff = time % periodTime;
