@@ -83,7 +83,7 @@ function animate() {
   const g = 9.81
   const time = Date.now() / 1000;
   const periodTime = 2 * Math.PI * Math.sqrt(length / g);
-  const frequency = 1/periodTime;
+  const frequency = 0.5 * Math.PI * Math.sqrt(length / g);
   const timeDiff = time % periodTime;
   angle = amplitude * Math.cos(2 * Math.PI * timeDiff / period);
   angularAcceleration = -(g / length) * Math.sin(angle);
